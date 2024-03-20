@@ -14,11 +14,11 @@ public class Switch {
 			switch(number) {
 			case 3:
 				System.out.println("correct");
-				
+				break;
 			
 			case 6:
 				System.out.println("special");
-//				break;
+				break;
 			
 			case 9:
 				System.out.println("nine");
