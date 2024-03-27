@@ -6,6 +6,8 @@ public class StringArrays {
 		for(String word: words) {
 			System.out.println(word);
 		}
+		
+		
 	}
 }
  
