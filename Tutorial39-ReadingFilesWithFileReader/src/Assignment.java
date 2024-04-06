@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ReadingFiles {
+public class Assignment {
 
 	public static void main(String[] args) {
 		
@@ -73,22 +73,59 @@ public class ReadingFiles {
 			int[] firstNumberDigits = new int[20];
 			int[] secondNumberDigits = new int[20];
 			
+			
+			// convert all strings to integers
 			for (int i=0; i<firstNumber.length; i++) {
 				firstNumberDigits[i] = Integer.parseInt(firstNumber[i]);
 				secondNumberDigits[i] = Integer.parseInt(secondNumber[i]);
 			}
 			
 			
-			
-			
+			// put each new digit in array
 			for (int i=9; i>=0; i = i-1) {
-				newNumber[i] = firstNumberDigits[i] + secondNumberDigits[i];
-
+				if ((firstNumberDigits[i] + secondNumberDigits[i]) >= 10) {
+					newNumber[i+1] = (firstNumberDigits[i] + secondNumberDigits[i]) % 10;
+					if (i != 0) {
+						firstNumberDigits[i-1] = firstNumberDigits[i-1] + 1;
+					}
+					else {
+						newNumber[0] = 1;
+					}
+				}
+				else {
+					newNumber[i+1] = firstNumberDigits[i] + secondNumberDigits[i];
+					
+				}
+				
+				
 			}
 			
-			for (int i = 0; i<10; i = i + 1) {
-				System.out.print(newNumber[i]);
+			
+			
+			
+			// output each digit
+			
+			if (newNumber[0] == 1) {
+				for (int i = 0; i<11; i = i + 1) {
+					System.out.print(newNumber[i]);
+				}
 			}
+			else {
+				for (int i=1; i<10; i++) {
+					System.out.print(newNumber[i]);
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
