@@ -16,7 +16,7 @@ public class Assignment {
 			
 			String line;
 			
-			String[] bothNumbers = new String[5];
+			String[] bothNumbers = new String[2];
 			
 //			while ( (line = bufferedReader.readLine()) != null ) {
 //				System.out.println(line);
@@ -56,22 +56,11 @@ public class Assignment {
 //				System.out.print(secondNumber[i] + " ");
 //			}
 			
-			int[] newNumber = new int[11];
 			
-//			boolean carryOver = false;
-//			
-//			for (int i=10; i<newNumber.length; i = i - 1) {
-//				if ((Integer.parseInt(firstNumber[i]) + Integer.parseInt(firstNumber[i])) >= 9) {
-//					carryOver = true;
-//				}
-//				
-//				if (carryOver = true) {
-//					
-//				}
-//			}
+
 			
-			int[] firstNumberDigits = new int[20];
-			int[] secondNumberDigits = new int[20];
+			int[] firstNumberDigits = new int[10];
+			int[] secondNumberDigits = new int[10];
 			
 			
 			// convert all strings to integers
@@ -80,6 +69,7 @@ public class Assignment {
 				secondNumberDigits[i] = Integer.parseInt(secondNumber[i]);
 			}
 			
+			int[] newNumber = new int[11];
 			
 			// put each new digit in array
 			for (int i=9; i>=0; i = i-1) {
