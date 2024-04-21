@@ -30,7 +30,7 @@ File file = new File("text.txt");
 				
 			}
 			
-			int digitAmount = 3;
+			int digitAmount = 2;
 
 			
 			// each digit as a string in an array
@@ -115,6 +115,31 @@ File file = new File("text.txt");
 				System.out.print("\n");
 			}
 			
+			
+			
+			int[] answer = new int[digitAmount * 2];
+			
+			
+			for (int j=(digitAmount*2)-1; j>=0; j--) {
+				if ((grid[0][j] + grid[1][j]) >= 10) {
+					answer[j] = (grid[0][j] + grid[1][j]) % 10;
+					
+					grid[0][j-1] = grid[0][j-1] + 1;
+					
+					
+				}
+				else {
+					answer[j] = grid[0][j] + grid[1][j];
+					
+				}
+				
+				
+			}
+			
+			
+			for (int i=0; i<answer.length; i++) {
+				System.out.print(answer[i]);
+			}
 			
 			
 			
