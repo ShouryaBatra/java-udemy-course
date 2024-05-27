@@ -16,28 +16,7 @@ public class App {
 		
 
 		int counter = 0;
-		
-//		for (int i=0; i<values.length; i++) {
-//			if (values[i] != 0) {
-//				values[i] = 0;
-//				counter = counter + 1;
-//				if (counter == K) {
-//					System.out.println(values[i]);
-//					break;
-//				}
-//				int smallestNumber = values[i];
-//				for (int j=2; j<=(values.length/values[i]);j++) {
-//					if ((values[smallestNumber * j]) != 0) {
-//						values[smallestNumber * j] = 0;
-//						counter = counter + 1;
-//						if (counter == K) {
-//							System.out.println(values[smallestNumber * j]);
-//							break;
-//						}
-//					}
-//				}
-//			}
-//		}
+
 		int smallestNumber = 0;
 		// go through values
 		for (int i=0; i<values.length; i++) {
@@ -47,6 +26,7 @@ public class App {
 				counter++;
 				if (counter == K) {
 					System.out.println(values[i]);
+					return;
 				}
 				values[i] = 0;
 				
@@ -55,6 +35,7 @@ public class App {
 						counter++;	
 						if (counter == K) {
 							System.out.println(values[j]);
+							return;
 						}
 						values[j] = 0;
 					}
@@ -64,6 +45,8 @@ public class App {
 			
 			
 		}
+		
+		
 		
 		
 		
