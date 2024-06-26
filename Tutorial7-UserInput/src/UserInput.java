@@ -8,7 +8,7 @@ public class UserInput {
 		
 		System.out.println("Enter a floating point value: "); // output the prompt
 		
-		double value = input.nextDouble(); // wait for user to enter something
+		double value = input.nextInt(); // wait for user to enter something
 	
 		System.out.println("You entered: " + value); // tell themn what they entered
 	}
