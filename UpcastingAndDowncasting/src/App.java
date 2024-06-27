@@ -42,7 +42,7 @@ public class App {
 		
 		Machine machine4 = new Machine();
 		Camera camera3 = (Camera)machine3;
-		camera3.start();
+		camera3.snap();
 		
 		
 	}
